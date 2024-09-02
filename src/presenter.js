@@ -1,4 +1,4 @@
-import { leer_comando } from "./auto";
+import { leer_comando , leer_dimension} from "./auto";
 
 const comando = document.querySelector("#comando");
 const form = document.querySelector("#comando-form");
@@ -8,5 +8,8 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
 
   const output = leer_comando(comando.value);
-  div.innerHTML = "<p>" + output + "</p>";
+  const dimension = leer_dimension(comando.value);
+  div.innerHTML = 
+  "<p>Comando: " + output + "</p>" +
+  "<p>Dimension: " + dimension + "</p>";
 });
