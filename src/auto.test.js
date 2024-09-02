@@ -1,4 +1,4 @@
-import { leer_comando , leer_dimension} from "./auto.js";
+import { leer_comando , leer_dimension, leer_pos_inicial} from "./auto.js";
 
 describe("Auto a Control Remoto", () => {
     it("deberia retornar el comando 5,5/1,2N/IAIAIAIAA", () => {
@@ -7,4 +7,7 @@ describe("Auto a Control Remoto", () => {
     it("deberia retornar la dimension del mapa", () => {
       expect(leer_dimension("5,5/1,2N/IAIAIAIAA")).toEqual("5,5");
     });
+    it("deberia retornar la posicion inicial 1,2", () => {
+        expect(leer_pos_inicial("5,5/1,2N/IAIAIAIAA")).toEqual("1,2N");
+      });
   });
