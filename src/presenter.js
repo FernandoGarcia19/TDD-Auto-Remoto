@@ -1,4 +1,4 @@
-import { leer_comando, leer_dimension, leer_pos_inicial, leer_instrucciones} from "./auto";
+import { leer_comando, leer_dimension, leer_pos_inicial, leer_instrucciones} from "./auto.js";
 
 const comando = document.querySelector("#comando");
 const form = document.querySelector("#comando-form");
